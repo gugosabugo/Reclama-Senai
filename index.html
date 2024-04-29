@@ -49,6 +49,15 @@
             </section>
         <section>
             <label>Reclamação</label>
+            
+                <select name="$Tipo de Problema" required>
+                    <option value="">Sua reclamação refere-se a um problema...</option>
+                    <option value="interpessoal">...Interpessoal</option>
+                    <option value="pessoal">...Pessoal</option>
+                    <option value="infraestrutura">...Em relação à infraestrutura</option>
+                    <option value="outro">...Outro</option>
+                </select>
+    
             <input type="text" name="subject" placeholder="Assunto" required autocomplete="off">
             <textarea name="$problema" cols="75" rows="10" placeholder="Descreva seu problema" required></textarea>
             </section>
