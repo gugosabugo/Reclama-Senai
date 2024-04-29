@@ -1,8 +1,21 @@
+@font-face {
+  font-family: 'Questrial';
+  src: url('Questrial-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Questrial', sans-serif;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial;
 }
 body{
     display: flex;
@@ -92,6 +105,17 @@ form textarea{
 form textarea:focus{
     border-radius: 16px;
 }
+
+select{
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #fff494;
+    border: transparent;
+    color: #97968d;
+    font-size: 15px;
+    }
+
 
 /*Bagulho do botão de enviar*/
 
