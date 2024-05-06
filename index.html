@@ -11,12 +11,8 @@
 
 <body onload="toggleNameEmail()">
     <form action="https://api.staticforms.xyz/submit" method="post">
-    <section1>
-        <img 
-            src="logocabecalho.png"
-            width= "185"
-            height= "75"
-            />
+        <section1>
+            <img src="logocabecalho.png" width="185" height="75" />
         </section1>
 
         <section>
@@ -29,45 +25,45 @@
                 <input type="radio" name="anonymous" value="yes" id="anonymous-yes" onchange="toggleNameEmail()">
                 <label for="anonymous-yes">Sim</label>
             </div>
-            </section>
+        </section>
 
         <section>
             <div id="name-email" class="hidden">
                 <div>
                     <label>Nome</label>
-                    </div>
+                </div>
                 <input type="text" name="$nome" id="name" placeholder="Digite seu nome" autocomplete="off">
                 <div>
                     <label>Turma</label>
-                    </div>
+                </div>
                 <input type="text" name="$turma" id="class" placeholder="Digite sua turma" autocomplete="off">
                 <div>
                     <label>Email</label>
-                    </div>
+                </div>
                 <input type="email" name="email" id="email" placeholder="Digite seu email" autocomplete="off">
             </div>
-            </section>
+        </section>
+
         <section>
             <label>Reclamação</label>
-            
-                <select name="$Tipo de Problema" required>
-                    <option value="">Sua reclamação refere-se a um problema...</option>
-                    <option value="interpessoal">...Interpessoal</option>
-                    <option value="pessoal">...Pessoal</option>
-                    <option value="infraestrutura">...Em relação à infraestrutura</option>
-                    <option value="outro">...Outro</option>
-                </select>
-    
-            <input type="text" name="subject" placeholder="Assunto" required autocomplete="off">
+            <select name="$Tipo de Problema" required onchange="toggleAssunto()">
+                <option value="">Sua reclamação refere-se a um problema...</option>
+                <option value="interpessoal">...Interpessoal</option>
+                <option value="pessoal">...Pessoal</option>
+                <option value="infraestrutura">...Em relação à infraestrutura</option>
+                <option value="outro">...Outro</option>
+            </select>
+            <input type="text" name="subject" id="subject" placeholder="Assunto" required autocomplete="off" class="hidden2">
             <textarea name="$problema" cols="75" rows="10" placeholder="Descreva seu problema" required></textarea>
-            </section>
+        </section>
+
         <section2>
             <button type="submit">Enviar</button>
-            </section2>
+        </section2>
 
-            <input type="hidden" name="accessKey" value="158f5056-2277-4ae6-8590-8440378d7d1e">
-            <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/obrigado.html">
-        </form>
+        <input type="hidden" name="accessKey" value="158f5056-2277-4ae6-8590-8440378d7d1e">
+        <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/obrigado.html">
+    </form>
 
     <script>
         function toggleNameEmail() {
@@ -77,23 +73,34 @@
             var emailInput = document.getElementById('email');
             var classInput = document.getElementById('class');
 
-        if (anonymousYes.checked) {
-            nameEmail.classList.add('hidden');
-            nameInput.removeAttribute('required');
-            emailInput.removeAttribute('required');
-            classInput.removeAttribute('required');
-            nameInput.value = "Anônimo";
-            emailInput.value = "anonimo@example.com";
-        } else {
-            nameEmail.classList.remove('hidden');
-            nameInput.setAttribute('required', 'required'); 
-            emailInput.setAttribute('required', 'required');
-            nameInput.value = "";
-            emailInput.value = "";
-            classInput.value = "";
+            if (anonymousYes.checked) {
+                nameEmail.classList.add('hidden');
+                nameInput.removeAttribute('required');
+                emailInput.removeAttribute('required');
+                classInput.removeAttribute('required');
+                nameInput.value = "Anônimo";
+                emailInput.value = "anonimo@example.com";
+            } else {
+                nameEmail.classList.remove('hidden');
+                nameInput.setAttribute('required', 'required');
+                emailInput.setAttribute('required', 'required');
+                nameInput.value = "";
+                emailInput.value = "";
+                classInput.value = "";
+            }
         }
-    }
 
+        function toggleAssunto() {
+            var selectElement = document.querySelector('select[name="$Tipo de Problema"]');
+            var assuntoInput = document.getElementById('subject');
+            if (selectElement.value === 'outro') {
+                assuntoInput.classList.remove('hidden2');
+                assuntoInput.setAttribute('required', 'required');
+            } else {
+                assuntoInput.classList.add('hidden2');
+                assuntoInput.removeAttribute('required');
+            }
+        }
     </script>
 </body>
 </html>
