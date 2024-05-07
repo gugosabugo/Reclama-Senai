@@ -21,10 +21,29 @@
                 <input type="radio" name="anonymous" value="no" id="anonymous-no" checked onchange="toggleNameEmail()">
                 <label for="anonymous-no">Não</label>
             </div>
-            <div>
-                <input type="radio" name="anonymous" value="yes" id="anonymous-yes" onchange="toggleNameEmail()">
+            <div onclick="openModal()">
+                <input class="btnOpenModal"  type="radio" name="anonymous" value="yes"
+                    id="anonymous-yes" onchange="toggleNameEmail()">
                 <label for="anonymous-yes">Sim</label>
             </div>
+
+            <div class="modal-container">
+                <div class="modal">
+                  <h2>Info</h2>
+                  <hr />
+                  <span>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting 
+                    industry. Lorem Ipsum has been the industry's standard dummy text
+                     ever since the 1500s, when an unknown printer took a galley of 
+                     type and scrambled it to make a type specimen book. 
+                  </span>
+                  <hr />
+                  <div class="btns">
+                    <button class="btnOK" onclick="closeModal()">OK</button>
+                    <button class="btnClose" onclick="closeModal()">Close</button>
+                  </div>
+                </div>
+              </div>
         </section>
 
         <section>
@@ -100,6 +119,17 @@
                 assuntoInput.classList.add('hidden2');
                 assuntoInput.removeAttribute('required');
             }
+        }
+
+        
+        const modal = document.querySelector('.modal-container')
+
+        function openModal() {
+            modal.classList.add('active')
+        }
+
+        function closeModal() {
+            modal.classList.remove('active')
         }
     </script>
 </body>
