@@ -286,11 +286,8 @@ form button:hover{
   
   .btnOK {
    background-color: rgb(36, 187, 247)!important;
+   margin-left: 45%;
   }
-  
-  .btnClose {
-    background-color: rgb(205, 125, 125)!important;
-   }
   
    @media (max-width: 500px) {
     .modal {
