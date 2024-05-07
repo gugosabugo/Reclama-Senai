@@ -299,3 +299,9 @@ form button:hover{
       font-size: smaller;
     }
    }
+
+      /*cor do input*/
+      input:focus {
+        background-color:#e6e6e6;
+        }
+      .infopessoal:valid { background-color:#e6e6e6; };
