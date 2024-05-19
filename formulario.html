@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Reclama Senai</title>
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+</head>
+
+<body onload="toggleNameEmail()">
+    <form action="https://api.staticforms.xyz/submit" method="post">
+        <section1>
+            <img src="logocabecalho.png" width="185" height="75" />
+        </section1>
+
+        <section>
+            <label>Deseja permanecer anônimo?</label>
+            <div>
+                <input type="radio" name="anonymous" value="no" id="anonymous-no" checked onchange="toggleNameEmail()">
+                <label for="anonymous-no">Não</label>
+            </div>
+            <div onclick="openModal()">
+                <input class="btnOpenModal"  type="radio" name="anonymous" value="yes"
+                    id="anonymous-yes" onchange="toggleNameEmail()">
+                <label for="anonymous-yes">Sim</label>
+            </div>
+
+            <div class="modal-container">
+                <div class="modal">
+                  <h2>Atenção!</h2>
+                  <hr />
+                  <span>
+                    Ao permanecer anônimo, é crucial a compreensão de que é dificultada 
+                    a resolução do problema, averiguação dos fatos e não há possibilidade
+                    de contato com o indivíduo que enviou a reclamação.
+                  </span>
+                  <hr />
+                  <div class="btns">
+                    <button class="btnOK" onclick="closeModal()">OK</button>
+                  </div>
+                </div>
+              </div>
+        </section>
+
+        <section>
+            <div id="name-email" class="hidden">
+                <div>
+                    <label>Nome</label>
+                </div>
+                <input class="infopessoal" type="text" name="$nome" id="name" placeholder="Digite seu nome" autocomplete="off">
+                <div>
+                    <label>Turma</label>
+                </div>
+                <input class="infopessoal" type="text" name="$turma" id="class" placeholder="Digite sua turma" autocomplete="off">
+                <div>
+                    <label>Email</label>
+                </div>
+                <input class="infopessoal" type="email" name="email" id="email" placeholder="Digite seu email" autocomplete="off">
+            </div>
+        </section>
+
+        <section>
+            <label>Reclamação</label>
+            <select name="$Tipo de Problema" required onchange="toggleAssunto()">
+                <option value="">Sua reclamação refere-se a um problema...</option>
+                <option value="interpessoal">...Interpessoal</option>
+                <option value="pessoal">...Pessoal</option>
+                <option value="infraestrutura">...Em relação à infraestrutura</option>
+                <option value="outro">...Outro</option>
+            </select>
+            <input type="text" name="subject" id="subject" placeholder="Assunto" required autocomplete="off" class="hidden2">
+            <textarea name="$problema" cols="75" rows="10" placeholder="Descreva seu problema" required></textarea>
+        </section>
+
+        <section2>
+            <a href="obrigado.html"><button type="submit">Enviar</button><a>
+        </section2>
+
+        <input type="hidden" name="accessKey" value="158f5056-2277-4ae6-8590-8440378d7d1e">
+    </form>
+
+    <script>
+        function toggleNameEmail() {
+            var nameEmail = document.getElementById('name-email');
+            var anonymousYes = document.getElementById('anonymous-yes');
+            var nameInput = document.getElementById('name');
+            var emailInput = document.getElementById('email');
+            var classInput = document.getElementById('class');
+
+            if (anonymousYes.checked) {
+                nameEmail.classList.add('hidden');
+                nameInput.removeAttribute('required');
+                emailInput.removeAttribute('required');
+                classInput.removeAttribute('required');
+                nameInput.value = "Anônimo";
+                emailInput.value = "anonimo@example.com";
+            } else {
+                nameEmail.classList.remove('hidden');
+                nameInput.setAttribute('required', 'required');
+                emailInput.setAttribute('required', 'required');
+                classInput.setAttribute('required', 'required');
+                nameInput.value = "";
+                emailInput.value = "";
+                classInput.value = "";
+            }
+        }
+
+        function toggleAssunto() {
+            var selectElement = document.querySelector('select[name="$Tipo de Problema"]');
+            var assuntoInput = document.getElementById('subject');
+            if (selectElement.value === 'outro') {
+                assuntoInput.classList.remove('hidden2');
+                assuntoInput.setAttribute('required', 'required');
+            } else {
+                assuntoInput.classList.add('hidden2');
+                assuntoInput.removeAttribute('required');
+            }
+        }
+
+        
+        const modal = document.querySelector('.modal-container')
+
+        function openModal() {
+            modal.classList.add('active')
+        }
+
+        function closeModal() {
+            modal.classList.remove('active')
+        }
+    </script>
+</body>
+</html>
