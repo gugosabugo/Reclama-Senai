@@ -18,28 +18,36 @@
     box-sizing: border-box;
 }
 body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background-image: url("fundo.png");
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: cover;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url("fundo.png");
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: 'Questrial', sans-serif;
 }
-section1{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 10px 45px;
-    background: #ff0000;
-    width: 800px;
-    border-radius: 15px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    box-shadow: -5px 5px rgba(80, 18, 50, 0.15);
+
+/* Estilos do header */
+header {
+  background-color: #ff0000;
+  color: #fff;
+  padding: 10px 0;
+  height: 70px;
+  box-shadow: -5px 5px rgba(80, 18, 50, 0.15);
 }
+
+.cabecalho {
+  display: flex;
+  align-items: center;
+}
+
+.logo2{
+  margin-left: 30px;
+  margin-right: 2px;
+  margin-bottom: 5px;
+}
+
 
 section2{
     display: flex;

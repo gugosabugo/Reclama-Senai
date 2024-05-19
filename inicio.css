@@ -38,12 +38,13 @@ header {
   background-color: #ff0000;
   color: #fff;
   padding: 10px 0;
-  height: 70px; /* Adicione uma altura ao cabeçalho */
+  height: 70px;
+  box-shadow: -5px 5px rgba(80, 18, 50, 0.15);
 }
 
 .cabecalho {
   display: flex;
-  align-items: center; /* Centraliza verticalmente */
+  align-items: center;
 }
 
 .logo2{
