@@ -1,0 +1,119 @@
+@font-face {
+  font-family: 'Questrial';
+  src: url('Questrial-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos globais */
+body {
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url("fundo.png");
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: 'Questrial', sans-serif;
+}
+
+.container {
+  padding: 50px;
+  width: 1200px;
+  background-color: #fff;
+  margin: 0 auto;
+  border-radius: 16px;
+  box-shadow: -5px 5px rgba(80, 18, 50, 0.15);
+}
+
+/* Estilos do header */
+header {
+  background-color: #ff0000;
+  color: #fff;
+  padding: 10px 0;
+  height: 70px; /* Adicione uma altura ao cabeçalho */
+}
+
+.cabecalho {
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
+}
+
+.logo2{
+  margin-left: 30px;
+  margin-right: 2px;
+  margin-bottom: 5px;
+}
+
+/* Estilos do hero */
+.hero {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.logo4{
+  width: 350px;
+}
+
+.logocontainer{
+  background-color: #ff0000;
+  border-radius: 10px;
+  width: 350px;
+  padding: 5px;
+  padding-right: 100px;
+  padding-left: 100px;
+  box-shadow: -2px 2px rgba(80, 18, 50, 0.15);
+  margin-bottom: 10px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero h5 {
+  color: #696969;
+}
+
+.texto {
+  color: #555;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.info{
+  color: #555;
+  font-size: 1rem;
+}
+
+a{
+  color: #ff0000;
+}
+
+button {
+  box-shadow: -2px 2px rgba(80, 18, 50, 0.15);
+  display: inline-block;
+  padding: 10px 45px;
+  cursor: pointer;
+  font-size: 16px;
+  background: #ff0000;
+  border: 2px solid #ff0000;
+  color: #ffffff;
+  transition: all 1s;
+  margin-bottom: 20px;
+  border-radius: 16px;
+  font-family: 'Questrial', sans-serif;
+}
+
+button:hover {
+  background: #fcfcfc;
+  color: #ff0000;
+  border: 2px solid #fcfcfc;
+}
