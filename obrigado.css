@@ -1,29 +1,327 @@
-.main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background: #000000;
-    flex-direction: column;
- }
- .text{
-     font-size: 45px;
-     color: #f5f5f5;
-     margin-bottom: 30px;
- }
- .paragrafo{
-     color: #f5f5f5;
-     margin-bottom: 50px;
- }
- .btn{
-     padding: 15px 55px;
-     background: #f5f5f5;
-     text-decoration: none;
-     color: #000000;
-     font-size: 18px;
-     transition: all 0.5s;
-     border-radius: 16px;
- }
- .btn:hover{
-     border-radius: 16px;
- }
+@font-face {
+    font-family: 'Questrial';
+    src: url('Questrial-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Questrial', sans-serif;
+  }
+  
+  *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+  body{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-image: url("fundo.png");
+      background-position: center center;
+      background-attachment: fixed;
+      background-size: cover;
+  }
+  section1{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 10px 45px;
+      background: #ff0000;
+      width: 800px;
+      border-radius: 15px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      box-shadow: -5px 5px rgba(80, 18, 50, 0.15);
+  }
+  
+  section2{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 10px 45px;
+      background: transparent;
+      width: 800px;
+  }
+  
+  section{
+      display: flex;
+      align-items: start;
+      justify-content: start;
+      flex-direction: column;
+      padding: 20px 45px;
+      background: #ffffff;
+      width: 800px;
+      border-radius: 15px;
+      margin-bottom: 5px;
+      box-shadow: -5px 5px rgba(80, 18, 50, 0.15);
+  }
+  
+  section1 h2{
+      color: #ffffff;
+      font-size: 2.5rem;
+      margin: 2rem;
+  }
+  section form{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+  }
+  form label{
+      color: #000000;
+      font-size: 20px;
+      margin-bottom: 10px;
+      margin-top: 5px;
+  }
+  form input{
+      background: #fff494;
+      padding: 10px;
+      outline: none;
+      border: 0;
+      margin-bottom: 15px;
+      font-size: 15px;
+      transition: all 0.5s;
+      border-radius: 10px;
+      
+  }
+  
+  form textarea{
+      background: #fff494;
+      padding: 10px;
+      outline: none;
+      border: 0;
+      font-size: 15px;
+      margin-bottom: 30px;
+      transition: all 0.5s;
+      border-radius: 10px;
+  }
+  form textarea:focus{
+      border-radius: 10px;
+  }
+  
+  select{
+      border-radius: 10px;
+      margin-bottom: 20px;
+      padding: 10px;
+      background: #fff494;
+      border: transparent;
+      color: #97968d;
+      font-size: 15px;
+      }
+      
+  .infopessoal{
+      background: #fff494;
+      padding: 10px;
+      width: 400px;
+      outline: none;
+      border: 0;
+      margin-bottom: 15px;
+      font-size: 15px;
+      transition: all 0.5s;
+      border-radius: 10px;
+      }
+  
+  /*Bagulho do botão de enviar*/
+  
+  form button{
+      padding: 10px 45px;
+      cursor: pointer;
+      font-size: 16px;
+      background: #ff0000;
+      border: 2px solid #ff0000;
+      color: #ffffff;
+      transition: all 1s;
+      margin-bottom: 20px;
+      border-radius: 16px;
+  }
+  form button:hover{
+      background: #ffffff;
+      color: #ff0000;
+      border: 2px solid #ffffff;
+  }
+  
+  /*Bagulho que esconde e mostra o campo de nome e email*/
+  
+  .hidden {
+      opacity: 0;
+      height: 0;
+      overflow: hidden;
+      transition: opacity 0.5s ease, height 0.5s ease;
+  }
+  
+  .hidden label,
+  .hidden input {
+      pointer-events: none;
+  }
+  
+  #name-email:not(.hidden) {
+      opacity: 1;
+      height: auto;
+      overflow: visible;
+      transition: opacity 0.5s ease, height 0.5s ease;
+  }
+  
+  /* coiso que esconde o assunto */
+  .hidden2 {
+      display: none;
+  }
+  
+  /*Página do Obrigado*/
+  
+  body {
+    background-image: url("fundo.png");
+  }
+  
+  .quadrado{
+    padding: 30px;
+    background-color: white;
+    border-radius: 20;
+    box-shadow: -5px 5px rgba(80, 18, 50, 0.15);
+    margin: 10px;
+  }
+  
+  .main{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     min-height: 100vh;
+     flex-direction: column;
+  }
+  .text{
+      font-size: 45px;
+      color:red;
+      margin-bottom: 30px;
+      text-align: center;
+  }
+  .text2{
+      color: red;
+      margin-bottom: 20px;
+      text-align: center;
+  }
+  .btn{
+      padding: 15px 55px;
+      background: #f5f5f5;
+      text-decoration: none;
+      color: red;
+      font-size: 18px;
+      transition: all 0.5s;
+      border-radius: 16px;
+  }
+  .btn:hover{
+      border-radius: 16px;
+  }
+  
+  
+  /* usar #d9d9d9 para cor de campos preenchidos*/
+  
+  .btnOpenModal {
+      font-size: x-large;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: blueviolet;
+      color: white;
+      cursor: pointer;
+    }
+    
+    hr {
+      border: 0px;
+      border-top: 1px solid lightgray;
+    }
+    
+    .modal-container {
+      width: 100vw;
+      position: fixed;
+      top: 30px;
+      display: none;
+      z-index: 999;
+      justify-content: center;
+      position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+    
+    .modal {
+      display: flex;
+      flex-direction: column;
+      padding: 30px;
+      background-color: rgba(255, 255, 255, 0.709);
+      border-radius: 10px;
+      width: 50%;
+      
+    }
+    
+    .active {
+      display: flex;
+    }
+    
+    .active .modal {
+      animation: modal .4s;
+    }
+    
+    @keyframes modal {
+      from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+      }
+      to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+    
+    span {
+      margin: 10px auto;
+    }
+    
+    .btns {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+    
+    .btns button {
+      font-size: medium;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+    }
+    
+    .btnOK {
+     background-color: rgb(36, 187, 247)!important;
+     margin-left: 45%;
+    }
+    
+     @media (max-width: 500px) {
+      .modal {
+        padding: 10px;
+        width: 80%;
+      }   
+    
+      span, .btns button {
+        font-size: smaller;
+      }
+     }
+  
+        /*cor do input*/
+        input:focus {
+          background-color:#e6e6e6;
+          }
+        .infopessoal:valid { background-color:#e6e6e6; };
+  
+        .centralizar  {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
