@@ -252,7 +252,7 @@ form button:hover{
   }
   
   .btns button {
-    padding: 10px 45px;
+    padding: 10px;
     cursor: pointer;
     font-size: 16px;
     background: #ff0000;
