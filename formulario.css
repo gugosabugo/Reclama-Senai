@@ -182,7 +182,7 @@ form button:hover{
 }
 
 
-/* usar #d9d9d9 para cor de campos preenchidos*/
+/* pop-up*/
 
 .btnOpenModal {
     font-size: x-large;
@@ -216,10 +216,10 @@ form button:hover{
     display: flex;
     flex-direction: column;
     padding: 30px;
-    background-color: rgba(255, 255, 255, 0.709);
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
     width: 50%;
-    
+    box-shadow: -5px 5px rgba(80, 18, 50, 0.15);
   }
   
   .active {
@@ -252,16 +252,25 @@ form button:hover{
   }
   
   .btns button {
-    font-size: medium;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    color: white;
+    padding: 10px 45px;
     cursor: pointer;
+    font-size: 16px;
+    background: #ff0000;
+    border: 2px solid #ff0000;
+    color: #ffffff;
+    transition: all 1s;
+    margin-bottom: 20px;
+    border-radius: 16px;
+    box-shadow: -2px 2px rgba(80, 18, 50, 0.15);
+  }
+
+  .btns button:hover {
+    background: #ffffff;
+    color: #ff0000;
+    border: 2px solid #ffffff;
   }
   
   .btnOK {
-   background-color: rgb(36, 187, 247)!important;
    margin-left: 45%;
   }
   
