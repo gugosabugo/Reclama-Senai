@@ -18,14 +18,24 @@
     box-sizing: border-box;
 }
 body{
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
   background-image: url("fundo.png");
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
   font-family: 'Questrial', sans-serif;
+}
+
+.divisa{
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 /* Estilos do header */
@@ -35,6 +45,7 @@ header {
   padding: 10px 0;
   height: 70px;
   box-shadow: -5px 5px rgba(80, 18, 50, 0.15);
+  margin-bottom: 20px;
 }
 
 .cabecalho {
