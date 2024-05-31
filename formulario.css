@@ -477,18 +477,4 @@ form button:hover{
       font-size: smaller;
     }
    }
-
-      /*cor do input*/
-      input:focus {
-        background-color:#e6e6e6;
-        }
-      .infopessoal:valid { background-color:#e6e6e6; };
-
-      .form-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        margin-top: 50px; /* Ajuste conforme necessário */
-    }
     
