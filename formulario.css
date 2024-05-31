@@ -17,13 +17,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-  background-image: url("fundo.png");
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
-  font-family: 'Questrial', sans-serif;
-}
 
 .divisa{
   align-items: center;
@@ -53,34 +46,14 @@ header {
   align-items: center;
 }
 
+.cabecalho img {
+  max-width: 100%;
+}
+
 .logo2{
   margin-left: 30px;
   margin-right: 2px;
   margin-bottom: 5px;
-}
-
-
-section2{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 10px 45px;
-    background: transparent;
-    width: 800px;
-}
-
-section{
-    display: flex;
-    align-items: start;
-    justify-content: start;
-    flex-direction: column;
-    padding: 20px 45px;
-    background: #ffffff;
-    width: 800px;
-    border-radius: 15px;
-    margin-bottom: 5px;
-    box-shadow: -5px 5px rgba(80, 18, 50, 0.15);
 }
 
 section1 h2{
@@ -111,31 +84,197 @@ form input{
     
 }
 
+
+form textarea:focus{
+    border-radius: 10px;
+}
+
+/* Mobile */
+body{
+  background-image: url("fundo.png");
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: 'Questrial', sans-serif;
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+section{
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+  padding: 20px 45px;
+  background: #ffffff;
+  max-width: 85%;
+  border-radius: 15px;
+  margin-bottom: 5px;
+  box-shadow: -5px 5px rgba(80, 18, 50, 0.15);
+}
+
+#name-email{
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+  padding-right: 90px;
+  border-radius: 15px;
+  margin-bottom: 5px;
+}
+
+.infopessoal{
+  background: #fff494;
+  padding: 10px;
+  outline: none;
+  border: 0;
+  margin-bottom: 15px;
+  font-size: 15px;
+  transition: all 0.5s;
+  border-radius: 10px;
+  }
+
 form textarea{
+  background: #fff494;
+  padding: 10px;
+  padding-right: 60px;
+  max-width: 100%;
+  outline: none;
+  border: 0;
+  font-size: 15px;
+  margin-bottom: 30px;
+  transition: all 0.5s;
+  border-radius: 10px;
+}
+
+select{
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+  padding-right: 60px;
+  max-width: 100%;
+  background: #fff494;
+  border: transparent;
+  color: #97968d;
+  font-size: 15px;
+}
+
+section2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px 45px;
+  background: transparent;
+  max-width: 100%;
+}
+
+/* Tablet */
+@media (min-width:600px) {
+  body{
+    background-image: url("fundo.png");
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Questrial', sans-serif;
+    overflow-x: hidden;
+    width: 100vw;
+  }
+  
+  section{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    padding: 20px 45px;
+    background: #ffffff;
+    max-width: 85%;
+    border-radius: 15px;
+    margin-bottom: 5px;
+    box-shadow: -5px 5px rgba(80, 18, 50, 0.15);
+  }
+  
+  #name-email{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    padding-right: 90px;
+    border-radius: 15px;
+    margin-bottom: 5px;
+  }
+  
+  .infopessoal{
     background: #fff494;
     padding: 10px;
+    outline: none;
+    border: 0;
+    margin-bottom: 15px;
+    font-size: 15px;
+    transition: all 0.5s;
+    border-radius: 10px;
+    }
+  
+  form textarea{
+    background: #fff494;
+    padding: 10px;
+    padding-right: 60px;
+    max-width: 100%;
     outline: none;
     border: 0;
     font-size: 15px;
     margin-bottom: 30px;
     transition: all 0.5s;
     border-radius: 10px;
-}
-form textarea:focus{
-    border-radius: 10px;
-}
-
-select{
+  }
+  
+  select{
     border-radius: 10px;
     margin-bottom: 20px;
     padding: 10px;
+    padding-right: 60px;
+    max-width: 100%;
     background: #fff494;
     border: transparent;
     color: #97968d;
     font-size: 15px;
-    }
-    
-.infopessoal{
+  }
+  
+  section2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 45px;
+    background: transparent;
+    max-width: 100%;
+  }
+}
+
+/* Desktop */
+@media (min-width:900px) {
+  body{
+    background-image: url("fundo.png");
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Questrial', sans-serif;
+  }
+
+  section{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    padding: 20px 45px;
+    background: #ffffff;
+    width: 800px;
+    border-radius: 15px;
+    margin-bottom: 5px;
+    box-shadow: -5px 5px rgba(80, 18, 50, 0.15);
+  }
+
+  .infopessoal{
     background: #fff494;
     padding: 10px;
     width: 400px;
@@ -146,6 +285,49 @@ select{
     transition: all 0.5s;
     border-radius: 10px;
     }
+
+  form textarea{
+    background: #fff494;
+    padding: 10px;
+    outline: none;
+    border: 0;
+    font-size: 15px;
+    margin-bottom: 30px;
+    transition: all 0.5s;
+    border-radius: 10px;
+  }
+
+  select{
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #fff494;
+    border: transparent;
+    color: #97968d;
+    font-size: 15px;
+    }
+
+  section2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 45px;
+    background: transparent;
+    width: 800px;
+  }
+
+  #name-email{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    border-radius: 15px;
+    margin-bottom: 5px;
+  }
+}
+    
+
 
 /*Bagulho do botão de enviar*/
 
